@@ -108,9 +108,8 @@ def writedata(data):
             x += 1
         f2.write(str2add + "\n")
 
-def calcperc(line,niv):
+def calcperc(line):
     perc  = (float(line[6])* 100) / (float(line[6]) + float(line[7]))
-
     return perc
 
 writedata(dados)
