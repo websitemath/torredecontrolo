@@ -222,14 +222,14 @@ def checktrofeu(linha):
     #print(linha[7])
     if str(linha[8]) == "1":
         #print(linha[3] + ", tem medalha ferro")
-        msg = """<div id="block"><img id="trofeu" src="trofeu/bronzepsn.png" alt="" srcset=""></div>"""
+        msg = """<div id="block"><img id="trofeu" src="../trofeu/bronzepsn.png" alt="" srcset=""></div>"""
     if str(linha[9]) == "1":
-        msg = msg + " " + """<div id="block"><img id="trofeu" src="trofeu/ferropsn.png" alt="" srcset=""></div>"""
+        msg = msg + " " + """<div id="block"><img id="trofeu" src="../trofeu/ferropsn.png" alt="" srcset=""></div>"""
     
     if str(linha[10]) == "1":
-        msg = msg + " " + """<div id="block"><img id="trofeu" src="trofeu/ouropsn.png" alt="" srcset=""></div>"""
+        msg = msg + " " + """<div id="block"><img id="trofeu" src="../trofeu/ouropsn.png" alt="" srcset=""></div>"""
     if str(linha[11]) == "1":
-        msg = msg + " " + """<div id="block"><img id="trofeu" src="trofeu/platinapsn.png" alt="" srcset=""></div>"""
+        msg = msg + " " + """<div id="block"><img id="trofeu" src="../trofeu/platinapsn.png" alt="" srcset=""></div>"""
     return msg
 
 
