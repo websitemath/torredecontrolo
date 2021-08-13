@@ -251,7 +251,7 @@ def writeindex(dadosOrganizadosPorPontos):
     msg2add = ""
     xy = 0
     for l in dadosOP:
-        if i < 2:
+        if i < 3:
             nome = l[3]
             anoTurma = l[0] + "º" + l[1]
             num = l[2]
