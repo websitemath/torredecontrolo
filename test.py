@@ -335,10 +335,10 @@ def writeindex(dadosOrganizadosPorPontos,top):
                 <tr>
                     <th>Nome</th>
                     <th>Ano/Turma</th>
-                    <th>Número</th>
+                    <th>N&uacute;mero</th>
                     <th>Pontos</th>
-                    <th>Nível</th>
-                    <th>Número trofeus</th>
+                    <th>N&Iacute;vel</th>
+                    <th>N&uacute;mero trofeus</th>
                     <th>Ranking</th>
                 </tr>
                 """ + msg2add + """
