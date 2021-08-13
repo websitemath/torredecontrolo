@@ -172,7 +172,7 @@ def write2html(line,barra_perc):
                 <div id="nivelbarra">
                     <div id="circulonum">
                         <div id="circulo">
-                            <img id="imagem" src="avatar/""" + str(random.randint(1, 33)) + """.svg" alt="avatar">
+                            <img id="imagem" src="../avatar/""" + str(random.randint(1, 33)) + """.svg" alt="avatar">
                         </div>
                         <div id="num">
                             """ + str(line[5]) + """
