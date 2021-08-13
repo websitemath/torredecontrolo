@@ -200,7 +200,7 @@ def checktrofeu(linha):
 a1 = 0
 for l in dados:
     if (a1 > 0):
-        write2html(l,calcperc(l))
+        write2html(l,20)
     a1 += 1
 
 #pontos -> dados[l][4]
