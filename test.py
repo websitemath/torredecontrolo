@@ -9,10 +9,10 @@ dados = [] #6,A,7,MariaAna,16900,,,,,
 f  = open("dados.csv", "r")
 
 for i in f.readlines():
-    x = i.split(",")
+    x = i.split(";")
     x[-1] = x[-1].replace("\n","")        
     dados.append(x)
-
+    
 #se der erro é pq existe uma linha amais no .csv
 
 
@@ -53,7 +53,6 @@ def nivandstuff():
     
 nivandstuff()
 
-print(dados)
 
 """
         #try:
@@ -138,7 +137,7 @@ def writedata(data):
             if(x == 11):
                 str2add += str(k)
             else:
-                 str2add += str(k) + ","
+                 str2add += str(k) + ";"
             x += 1
         f2.write(str2add + "\n")
 
