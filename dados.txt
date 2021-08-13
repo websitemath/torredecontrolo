@@ -1,5 +1,0 @@
-ano,turma,numero,nome_completo,pontos,nivel,xp_sobra,t_bronze,t_ouro,t_platina
-6,A,7,Maria Ana,7500,7,500.0,1,0,0
-6,A,8,Jose Joao,2900,2,900.0,0,0,0
-6,A,9,Ana Luís,1200,1,200.0,0,0,0
-6,A,10,Mario Luís,200,0,200.0,0,0,0
