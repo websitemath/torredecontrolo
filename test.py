@@ -313,6 +313,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
     f2.write(msg)
 
 
-writeindex(dadosOP,11)
+writeindex(dadosOP,3)
 #print(pontos)
 #print(e)
