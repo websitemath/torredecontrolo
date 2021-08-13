@@ -322,7 +322,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         <script>
             function botao(){
                 value = document.getElementById("turmanum").value
-                window.location.replace("https://websitemath.github.io/torredecontrolo/" + value + ".html")
+                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html")
             }
         </script>
     </head>
