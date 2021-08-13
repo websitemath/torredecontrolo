@@ -16,10 +16,6 @@ for i in f.readlines():
 #se der erro é pq existe uma linha amais no .csv
 
 
-
-
-
-
 def niv():
     pontosList = [0,500,700,1000,2000,4000,8000,9000,10000 ,10600,12000,14000,16000,17000,18000,19000,20000,20500,21000,21490]
     
