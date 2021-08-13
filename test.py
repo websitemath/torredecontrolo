@@ -249,26 +249,27 @@ listRanking()
 def writeindex(dadosOrganizadosPorPontos):
     i = 1
     msg2add = ""
-    for l in dadosOP:
-        nome = l[3]
-        anoTurma = l[0] + "º" + l[1]
-        num = l[2]
-        pontos = l[4]
-        nivel = l[5]
-        numTrofeus = str(l[7] + l[8] + l[9] + l[10])
-        stringg = ""
-        if i % 2:
-            stringg = "background-color: #ffffff18;"
-        msg2add += """<tr style=" """ + str(stringg)  + """ ">
-                    <th>""" + str(nome) + """</th>
-                    <th>""" + str(anoTurma) + """</th>
-                    <th>""" + str(num) + """</th>
-                    <th>""" + str(pontos) + """</th>
-                    <th>""" + str(nivel) + """</th>
-                    <th>""" + str(numTrofeus) + """</th>
-                    <th>""" + str(i) + """</th>
-                    </tr>\n            """
-        i += 1
+    while i < 4:
+        for l in dadosOP:
+            nome = l[3]
+            anoTurma = l[0] + "º" + l[1]
+            num = l[2]
+            pontos = l[4]
+            nivel = l[5]
+            numTrofeus = str(l[7] + l[8] + l[9] + l[10])
+            stringg = ""
+            if i % 2:
+                stringg = "background-color: #ffffff18;"
+            msg2add += """<tr style=" """ + str(stringg)  + """ ">
+                        <th>""" + str(nome) + """</th>
+                        <th>""" + str(anoTurma) + """</th>
+                        <th>""" + str(num) + """</th>
+                        <th>""" + str(pontos) + """</th>
+                        <th>""" + str(nivel) + """</th>
+                        <th>""" + str(numTrofeus) + """</th>
+                        <th>""" + str(i) + """</th>
+                        </tr>\n            """
+            i += 1
         
 
     f2 = open("index.html", "w")
