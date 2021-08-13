@@ -43,7 +43,7 @@ def niv():
                     if i[5]:
                         print("foi encontrado o nivel")
                         i[6] = int(i[4]) - e #xp de sobra
-                        i[7] = "nivmax" #xp pra subir
+                        i[7] = 0 #"nivmax" #xp pra subir
                         print(dados)
                         break
                 else:
