@@ -154,7 +154,7 @@ writedata(dados)
 def write2html(line,barra_perc):
     randomNum = random.randint(0,33)
     barra_perc = str(barra_perc)
-    f2 = open("site/" + str(line[0]) + str(line[1]) + "_" + str(line[2]) + ".html", "w")
+    f2 = open("site\" + str(line[0]) + str(line[1]) + "_" + str(line[2]) + ".html", "w")
     msg = """<!DOCTYPE html>
         <html lang="pt-pt">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
