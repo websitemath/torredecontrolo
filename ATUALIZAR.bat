@@ -1,3 +1,4 @@
+cd C:\Users\laran\OneDrive\Ambiente de Trabalho\torredecontrolo
 python test.py
 git init
 git remote add origin https://github.com/websistemath/torredecontrolo.git
