@@ -1,0 +1,2 @@
+ver o numero de visistas por dia ao site
+colocar o podio de cores diferentes no ranking do index.html
