@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function botao(){
+            value = document.getElementById("turmanum").value
+            window.location.replace("file:///home/farrucho/MEGAsync/site/" + value + ".html")
+        }
+    </script>
+</head>
+<body>
+    <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO ( em maiusculo)</h1>
+    <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
+    <button id="botao" onclick="botao()">Redirecionar</button>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Ano/Turma</th>
+            <th>Número</th>
+            <th>Pontos</th>
+            <th>Nível</th>
+            <th>Ranking</th>
+            <th>Número trofeus</th>
+        </tr>
+        <tr style="background-color: #ffffff18;">
+            <td>Jill</td>
+            <td>Jill</td>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>Smith</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Jill</td>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>Smith</td>
+            <td>2</td>
+            <td>0</td>
+        </tr>
+      </table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html lang="pt-pt">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <script>
+            function botao(){
+                value = document.getElementById("turmanum").value
+                window.location.replace("file:///home/farrucho/MEGAsync/site/" + value + ".html")
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO ( em maiusculo)</h1>
+        <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
+        <button id="botao" onclick="botao()">Redirecionar</button>
+        <div id="tablediv">
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano/Turma</th>
+                    <th>Número</th>
+                    <th>Pontos</th>
+                    <th>Nível</th>
+                    <th>Número trofeus</th>
+                    <th>Ranking</th>
+                </tr>
+                <tr style=" background-color: #ffffff18; ">
+                    <th>antonio maria</th>
+                    <th>7ºC</th>
+                    <th>4</th>
+                    <th>21490</th>
+                    <th>20</th>
+                    <th>4</th>
+                    <th>1</th>
+                    </tr>
+            <tr style="  ">
+                    <th>Maria Ana</th>
+                    <th>6ºA</th>
+                    <th>7</th>
+                    <th>8000</th>
+                    <th>7</th>
+                    <th>1</th>
+                    <th>2</th>
+                    </tr>
+            <tr style=" background-color: #ffffff18; ">
+                    <th>Jose Joao</th>
+                    <th>6ºA</th>
+                    <th>8</th>
+                    <th>2000</th>
+                    <th>5</th>
+                    <th>0</th>
+                    <th>3</th>
+                    </tr>
+            <tr style="  ">
+                    <th>Ana Luís</th>
+                    <th>6ºA</th>
+                    <th>9</th>
+                    <th>1200</th>
+                    <th>4</th>
+                    <th>0</th>
+                    <th>4</th>
+                    </tr>
+            <tr style=" background-color: #ffffff18; ">
+                    <th>Mario Luís</th>
+                    <th>7ºB</th>
+                    <th>1</th>
+                    <th>200</th>
+                    <th>1</th>
+                    <th>0</th>
+                    <th>5</th>
+                    </tr>
+            
+            </table>
+        </div>
+    
+    </body>
+    </html>
