@@ -1,6 +1,6 @@
-ano,turma,numero,nome_completo,pontos,nivel,xp_sobra,t_bronze,t_ouro,t_platina
-6,A,7,Maria Ana,7500,6,500,1,0,0
-6,A,8,Jose Joao,2900,5,1100,0,0,0
-6,A,9,Ana Luís,1200,4,800,0,0,0
-7,B,1,Mario Luís,200,1,300,0,0,0
-7,C,4,antonio maria,700,3,300,0,0,0
+ano,turma,numero,nome_completo,pontos,nivel,xp_sobra,xp_prasubir,t_bronze,t_ferro,t_ouro,t_platina
+6,A,7,Maria Ana,9100,8,100,900,1,0,0,0
+6,A,8,Jose Joao,2000,5,0,2000,0,0,0,0
+6,A,9,Ana Luís,1200,4,200,800,0,0,0,0
+7,B,1,Mario Luís,450,1,450,50,0,0,0,0
+7,C,4,antonio maria,21490,20,0,0,1,1,1,1
