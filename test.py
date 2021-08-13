@@ -16,7 +16,7 @@ for i in f.readlines():
 #se der erro é pq existe uma linha amais no .csv
 
 
-def niv():
+def nivandstuff():
     pontosList = [0,500,700,1000,2000,4000,8000,9000,10000 ,10600,12000,14000,16000,17000,18000,19000,20000,20500,21000,21490]
     
     for m in range(len(dados)):
@@ -91,10 +91,9 @@ def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
                 i[11] = 0
         a += 1
 
-niv()
+nivandstuff()
 
 trofeus(6,14,18,20)
-
 
 def writedata(data):
     f2 = open("dados.csv", "w")
@@ -114,7 +113,6 @@ def calcperc(line,niv):
     return perc
 
 writedata(dados)
-
 
 def write2html(line,barra_perc):
     randomNum = random.randint(0,33)
