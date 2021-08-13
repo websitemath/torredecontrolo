@@ -109,7 +109,8 @@ def writedata(data):
         f2.write(str2add + "\n")
 
 def calcperc(line,niv):
-    perc = float(line[6])/float(niv) * 100
+    perc  = (float(line[6])* 100) / (float(line[6]) + float(line[7]))
+
     return perc
 
 writedata(dados)
@@ -200,7 +201,7 @@ def checktrofeu(linha):
 a1 = 0
 for l in dados:
     if (a1 > 0):
-        write2html(l,calcperc(l,1000))
+        write2html(l,calcperc(l))
     a1 += 1
 
 #pontos -> dados[l][4]
