@@ -25,47 +25,81 @@ def nivandstuff():
             dados[m][6] = ""
             dados[m][7] = ""
 
-    for i in dados:
-        try:
+    for i in range(len(dados)):
+        try:#vai fazer a partir da 2 linha, pois  a primeira é info
+            xp = int(dados[i][4])
+            for e in pontosList:
+                if dados[i][5]:
+                    break
+                if xp >= pontosList[-1]:
+                    nivel = 20
+                    dados[i][5] = nivel
+                    dados[i][6] = 0
+                    dados[i][7] = 0
+                elif xp > e and xp < pontosList[pontosList.index(e) + 1]:
+                    nivel = pontosList.index(e) + 1
+                    dados[i][5] = nivel
+                    dados[i][6] = xp - e
+                    dados[i][7] = pontosList[pontosList.index(e) + 1] - xp
+                elif xp == e:
+                    nivel = pontosList.index(e) + 1
+                    dados[i][5] = nivel
+                    dados[i][6] = xp - e
+                    dados[i][7] = pontosList[pontosList.index(e) + 1] - xp
+
+
+        except:
+            print("")
+    
+nivandstuff()
+
+print(dados)
+
+"""
+        #try:
             xp = int(i[4])
             for e in pontosList:
+                print(e)
                 if e == pontosList[-1]:
                     if xp > e:
                         nivel = (pontosList.index(e) + 1)
-                        print(xp,nivel)
+                        #print(xp,nivel)
                         i[5] = nivel
                     elif xp == e:
                         nivel = (pontosList.index(e) + 1)
-                        print(xp,nivel)
+                        #print(xp,nivel)
                         i[5] = nivel
-                    else:
-                        print("o que raio é que aconteceu, que dados estao no ficheiro")
+                    #else:
+                        #print("o que raio é que aconteceu, que dados estao no ficheiro")
                     if i[5]:
-                        print("foi encontrado o nivel")
+                        #print("foi encontrado o nivel")
                         i[6] = int(i[4]) - e #xp de sobra
                         i[7] = 0 #"nivmax" #xp pra subir
-                        print(dados)
+                        #print(dados)
                         break
+                    else:
+                        print("nao foi possivelo encontrar nivel")
                 else:
                     if xp > e and xp < pontosList[int(pontosList.index(e)) + 1]:
                         nivel = (pontosList.index(e) + 1)
-                        print(xp,nivel)
                         i[5] = nivel
-                        i[6] = pontosList[nivel] - xp
+                        i[6] = xp - pontosList[pontosList.index(e)]
+                        i[7] = pontosList[nivel] - xp
+                        print(i)
                     elif xp == e:
                         nivel = (pontosList.index(e) + 1)
-                        print(xp,nivel)
+                        #print(xp,nivel)
                         i[5] = nivel
                         i[6] = 0
                     if i[5]:
-                        print("foi encontrado o nivel")
+                        #print("foi encontrado o nivel")
                         i[7] = pontosList[nivel + 1] - int(i[4])
-                        print(dados)
+                        #print(dados)
                         break
         except ValueError:
             print("")
-
-    print(dados)
+            """
+    #print(dados)
 
 
 def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
@@ -91,7 +125,7 @@ def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
                 i[11] = 0
         a += 1
 
-nivandstuff()
+
 
 trofeus(6,14,18,20)
 
@@ -100,16 +134,19 @@ def writedata(data):
     for l in data:
         str2add = ""
         x = 0
-        for e in l:
+        for k in l:
             if(x == 11):
-                str2add += str(e)
+                str2add += str(k)
             else:
-                 str2add += str(e) + ","
+                 str2add += str(k) + ","
             x += 1
         f2.write(str2add + "\n")
 
 def calcperc(line):
-    perc  = (float(line[6])* 100) / (float(line[6]) + float(line[7]))
+    try:
+        perc  = (float(line[6])* 100) / (float(line[6]) + float(line[7]))
+    except ZeroDivisionError:
+        perc = 0
     return perc
 
 writedata(dados)
@@ -200,7 +237,7 @@ def checktrofeu(linha):
 a1 = 0
 for l in dados:
     if (a1 > 0):
-        write2html(l,20)
+        write2html(l,calcperc(l))
     a1 += 1
 
 #pontos -> dados[l][4]
