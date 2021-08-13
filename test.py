@@ -285,7 +285,7 @@ def writeindex(dadosOrganizadosPorPontos):
         <script>
             function botao(){
                 value = document.getElementById("turmanum").value
-                window.location.replace("file:///home/farrucho/MEGAsync/site/" + value + ".html")
+                window.location.replace("https://websitemath.github.io/torredecontrolo/" + value + ".html")
             }
         </script>
     </head>
