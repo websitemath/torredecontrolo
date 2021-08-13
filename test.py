@@ -197,7 +197,7 @@ def write2html(line,barra_perc):
                     <p id="subcat">""" + str(line[5]) + """</p>
                 </div>
                 <div id="block">
-                    <p id="cat">Número de ta&ccedil;as</p>        
+                    <p id="cat">N&uacute;mero de ta&ccedil;as</p>        
                     <p id="subcat">""" + str(line[8] + line[9] + line[10] + line[11]) + """</p>
                 </div>
                 <div id="block">
