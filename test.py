@@ -350,6 +350,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
     f2.write(msg)
 
 
-writeindex(dadosOP,4)
+writeindex(dadosOP,10)
 #print(pontos)
 #print(e)
