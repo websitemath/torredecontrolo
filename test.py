@@ -289,7 +289,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
     for l in dadosOrganizadosPorPontos:
         if i < (top + 1):#aparaece ate top -1 
             nome = l[3]
-            anoTurma = l[0] + "º" + l[1]
+            anoTurma = l[0] + "&deg;" + l[1]
             num = l[2]
             pontos = l[4]
             nivel = l[5]
