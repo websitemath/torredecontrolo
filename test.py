@@ -166,7 +166,7 @@ def write2html(line,barra_perc):
             <title>""" + str(line[3]) + """</title>
         </head>
         <body>
-            <h1 id="nomealuno"> """ + 'Estatísticas de ' + str(line[3]) + """</h1>
+            <h1 id="nomealuno"> """ + 'Estat&iacute;sticas de ' + str(line[3]) + """</h1>
             <div id="caixa">
                 <div id="nome">""" + str(line[3]) + """</div> 
                 <div id="nivelbarra">
@@ -193,7 +193,7 @@ def write2html(line,barra_perc):
                 </div>
 
                 <div id="block">
-                    <p id="cat">Nível</p>        
+                    <p id="cat">N&iacute;vel</p>        
                     <p id="subcat">""" + str(line[5]) + """</p>
                 </div>
                 <div id="block">
