@@ -337,7 +337,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
                     <th>Ano/Turma</th>
                     <th>N&uacute;mero</th>
                     <th>Pontos</th>
-                    <th>N&Iacute;vel</th>
+                    <th>N&iacute;vel</th>
                     <th>N&uacute;mero trofeus</th>
                     <th>Ranking</th>
                 </tr>
