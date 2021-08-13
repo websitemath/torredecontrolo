@@ -246,12 +246,12 @@ listRanking()
 #print(pontos)
 #print(dadosOP)
 
-def writeindex(dadosOrganizadosPorPontos):
+def writeindex(dadosOrganizadosPorPontos,top):
     i = 1
     msg2add = ""
     xy = 0
     for l in dadosOP:
-        if i < 3:
+        if i < top:#aparaece ate top -1 
             nome = l[3]
             anoTurma = l[0] + "º" + l[1]
             num = l[2]
@@ -313,6 +313,6 @@ def writeindex(dadosOrganizadosPorPontos):
     f2.write(msg)
 
 
-writeindex(dadosOP)
+writeindex(dadosOP,11)
 #print(pontos)
 #print(e)
