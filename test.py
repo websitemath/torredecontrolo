@@ -249,7 +249,7 @@ listRanking()
 def writeindex(dadosOrganizadosPorPontos):
     i = 1
     msg2add = ""
-    while i < 4:
+    while i < 2:
         for l in dadosOP:
             nome = l[3]
             anoTurma = l[0] + "º" + l[1]
