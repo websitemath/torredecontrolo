@@ -8,8 +8,8 @@
         <title>Torre de Controlo</title>
         <script>
             function botao(){
-                value = document.getElementById("turmanum").value
-                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html")
+                value = String(document.getElementById("turmanum").value).toUpperCase();
+                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html");
             }
         </script>
     </head>
