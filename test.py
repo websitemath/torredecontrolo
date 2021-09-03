@@ -54,53 +54,6 @@ def nivandstuff():
 nivandstuff()
 
 
-"""
-        #try:
-            xp = int(i[4])
-            for e in pontosList:
-                print(e)
-                if e == pontosList[-1]:
-                    if xp > e:
-                        nivel = (pontosList.index(e) + 1)
-                        #print(xp,nivel)
-                        i[5] = nivel
-                    elif xp == e:
-                        nivel = (pontosList.index(e) + 1)
-                        #print(xp,nivel)
-                        i[5] = nivel
-                    #else:
-                        #print("o que raio é que aconteceu, que dados estao no ficheiro")
-                    if i[5]:
-                        #print("foi encontrado o nivel")
-                        i[6] = int(i[4]) - e #xp de sobra
-                        i[7] = 0 #"nivmax" #xp pra subir
-                        #print(dados)
-                        break
-                    else:
-                        print("nao foi possivelo encontrar nivel")
-                else:
-                    if xp > e and xp < pontosList[int(pontosList.index(e)) + 1]:
-                        nivel = (pontosList.index(e) + 1)
-                        i[5] = nivel
-                        i[6] = xp - pontosList[pontosList.index(e)]
-                        i[7] = pontosList[nivel] - xp
-                        print(i)
-                    elif xp == e:
-                        nivel = (pontosList.index(e) + 1)
-                        #print(xp,nivel)
-                        i[5] = nivel
-                        i[6] = 0
-                    if i[5]:
-                        #print("foi encontrado o nivel")
-                        i[7] = pontosList[nivel + 1] - int(i[4])
-                        #print(dados)
-                        break
-        except ValueError:
-            print("")
-            """
-    #print(dados)
-
-
 def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
     a= 0
     for i in dados:
@@ -252,7 +205,6 @@ dadosOP = [] #dados organizado por pontos
 def listRanking():
     for l in dados:
         pontos.append(int(l[4]))
-        del l[6]
 
     pontos.sort()
     pontos.reverse()
@@ -260,27 +212,18 @@ def listRanking():
     while(len(pontos) != len(dadosOP)):
         for l in dados:
             for e in pontos:
-                #print("----------" + str(e))
                 try:
                     l.index(str(e))
-                    #print("Lista" + str(l) + "contem")
                     if(pontos.index(e) == len(dadosOP)):
                         dadosOP.append(l)
-                    #    print("adicionado")
-                    #else:
-                    #    print(pontos.index(e))
-                    #    print("----")
-                    #    print(len(dadosOP))
 
                 except ValueError:
-                    pass 
-                    #print("")
-                    #print("Lista" + str(l) + "does not contain value")
+                    pass
 
 listRanking()
 
 #print(pontos)
-#print(dadosOP)
+print(dadosOP)
 
 def writeindex(dadosOrganizadosPorPontos,top):
     i = 1
@@ -298,7 +241,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
             if i % 2:
                 stringg = "background-color: #ffffff18;"
             msg2add += """<tr style=" """ + str(stringg)  + """ ">
-                            <th>""" + str(nome) + """</th>
                             <th>""" + str(anoTurma) + """</th>
                             <th>""" + str(num) + """</th>
                             <th>""" + str(pontos) + """</th>
@@ -334,7 +276,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
             <table>
                 <tr>
                     <th>Nome</th>
-                    <th>Ano/Turma</th>
                     <th>N&uacute;mero</th>
                     <th>Pontos</th>
                     <th>N&iacute;vel</th>
