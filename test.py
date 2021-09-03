@@ -275,7 +275,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         <div id="tablediv">
             <table>
                 <tr>
-                    <th>Nome</th>
+                    <th>Turma/Ano</th>
                     <th>N&uacute;mero</th>
                     <th>Pontos</th>
                     <th>N&iacute;vel</th>
