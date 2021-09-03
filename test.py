@@ -262,14 +262,14 @@ def writeindex(dadosOrganizadosPorPontos,top):
         <title>Torre de Controlo</title>
         <script>
             function botao(){
-                value = document.getElementById("turmanum").value
-                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html")
+                value = String(document.getElementById("turmanum").value).toUpperCase();
+                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html");
             }
         </script>
     </head>
     <body>
         <h1 id="maintitle">Torre de Controlo</h1>
-        <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO ( em maiusculo)</h1>
+        <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
         <button id="botao" onclick="botao()">Redirecionar</button>
         <div id="tablediv">
