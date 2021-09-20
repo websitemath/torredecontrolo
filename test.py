@@ -271,7 +271,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         <h1 id="maintitle">Torre de Controlo</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
-        <button id="botao" onclick="botao()">Redirecionar</button>
+        <button id="botao" onclick="botao()">Carrega aqui</button>
         <div id="tablediv">
             <table>
                 <tr>
