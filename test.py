@@ -271,7 +271,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
             num = l[2]
             pontos = l[4]
             nivel = l[5]
-            numTrofeus = str(l[7] + l[8] + l[9] + l[10])
+            numTrofeus = str(l[8] + l[9] + l[10] + l[11])
             stringg = ""
             if i % 2:
                 stringg = "background-color: #ffffff18;"
