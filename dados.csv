@@ -1,24 +1,24 @@
 ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferro;t_ouro;t_platina
-7;A;1;Carolina Magina;0;1;0;500;0;0;0;0
-7;A;2;Duarte Valentim;0;1;0;500;0;0;0;0
-7;A;3;Gabriel Pereira;0;1;0;500;0;0;0;0
-7;A;4;Goncalo Mendes;0;1;0;500;0;0;0;0
-7;A;5;Ines Ferreira;0;1;0;500;0;0;0;0
-7;A;6;Ines Neto;0;1;0;500;0;0;0;0
-7;A;7;Joana Almeida;0;1;0;500;0;0;0;0
-7;A;8;Karaaaaaaaaaaaaaaa Rodrigues;0;1;0;500;0;0;0;0
-7;A;9;Lara Carvalho;0;1;0;500;0;0;0;0
-7;A;10;Maria Cardoso;0;1;0;500;0;0;0;0
-7;A;11;Maria Barros;0;1;0;500;0;0;0;0
-7;A;12;Maria Leonor Silva;0;1;0;500;0;0;0;0
-7;A;13;Matias Mendes;0;1;0;500;0;0;0;0
-7;A;14;Matilde Neves;0;1;0;500;0;0;0;0
-7;A;15;Matilde Vilela;0;1;0;500;0;0;0;0
-7;A;16;Pedro Maximino;0;1;0;500;0;0;0;0
-7;A;17;Pedro Monteiro;0;1;0;500;0;0;0;0
-7;A;18;Rafael Correia;0;1;0;500;0;0;0;0
-7;A;19;Rodrigo Fernandes;0;1;0;500;0;0;0;0
-7;A;20;Tiago Flor;0;1;0;500;0;0;0;0
+7;A;1;Carolina Magina;710;3;10;290;0;0;0;0
+7;A;2;Duarte Valentim;158;1;158;342;0;0;0;0
+7;A;3;Gabriel Pereira;620;2;120;80;0;0;0;0
+7;A;4;Goncalo Mendes;151;1;151;349;0;0;0;0
+7;A;5;Ines Ferreira;286;1;286;214;0;0;0;0
+7;A;6;Ines Neto;120;1;120;380;0;0;0;0
+7;A;7;Joana Almeida;294;1;294;206;0;0;0;0
+7;A;8;Karo Rodrigues;110;1;110;390;0;0;0;0
+7;A;9;Lara Carvalho;138;1;138;362;0;0;0;0
+7;A;10;Maria Cardoso;120;1;120;380;0;0;0;0
+7;A;11;Maria Barros;161;1;161;339;0;0;0;0
+7;A;12;Maria Leonor Silva;105;1;105;395;0;0;0;0
+7;A;13;Matias Mendes;648;2;148;52;0;0;0;0
+7;A;14;Matilde Neves;253;1;253;247;0;0;0;0
+7;A;15;Matilde Vilela;131;1;131;369;0;0;0;0
+7;A;16;Pedro Maximino;169;1;169;331;0;0;0;0
+7;A;17;Pedro Monteiro;620;2;120;80;0;0;0;0
+7;A;18;Rafael Correia;130;1;130;370;0;0;0;0
+7;A;19;Rodrigo Fernandes;133;1;133;367;0;0;0;0
+7;A;20;Tiago Flor;650;2;150;50;0;0;0;0
 7;B;1;Alexandre Goncalves;0;1;0;500;0;0;0;0
 7;B;2;Camila Pereira;0;1;0;500;0;0;0;0
 7;B;3;Dinis Gabriel;0;1;0;500;0;0;0;0
@@ -35,10 +35,10 @@ ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferr
 7;B;14;Madalena Pereira;0;1;0;500;0;0;0;0
 7;B;15;Maria Batista;0;1;0;500;0;0;0;0
 7;B;16;Maria Sousa;0;1;0;500;0;0;0;0
-7;B;17;Rodrigo Miranda;0;1;0;500;0;0;0;0
 7;B;18;Safira Joaquim;0;1;0;500;0;0;0;0
-7;B;19;Taaaaaaaaaaaaaasa Fernandes;0;1;0;500;0;0;0;0
+7;B;19;Taísa Fernandes;0;1;0;500;0;0;0;0
 7;B;20;Tiago Jesus;0;1;0;500;0;0;0;0
+7;B;21;Ana rafaela;0;1;0;500;0;0;0;0
 7;C;1;Adriel Evans;0;1;0;500;0;0;0;0
 7;C;2;Afonso Monteiro;0;1;0;500;0;0;0;0
 7;C;3;Alberto Abreu;0;1;0;500;0;0;0;0
@@ -52,7 +52,7 @@ ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferr
 7;C;11;Leandro Lopes;0;1;0;500;0;0;0;0
 7;C;12;Lisandro Melo;0;1;0;500;0;0;0;0
 7;C;13;Lucas Ferreira;0;1;0;500;0;0;0;0
-7;C;14;Laaaaaaaaaaaaaaaaaaaaaaaaaaacia Alves;0;1;0;500;0;0;0;0
+7;C;14;Lucia Alves;0;1;0;500;0;0;0;0
 7;C;15;Martim Marques;0;1;0;500;0;0;0;0
 7;C;16;Matilde Lopes;0;1;0;500;0;0;0;0
 7;C;17;Nuno Matias;0;1;0;500;0;0;0;0
@@ -81,9 +81,9 @@ ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferr
 7;D;20;Simao Figueiredo;0;1;0;500;0;0;0;0
 7;D;21;Sofia Oliveira;0;1;0;500;0;0;0;0
 7;D;22;Xavier Amandola;0;1;0;500;0;0;0;0
+7;D;23;Killian;0;1;0;500;0;0;0;0
 7;E;1;Ana Martins;0;1;0;500;0;0;0;0
-7;E;2;Ana Cabral;0;1;0;500;0;0;0;0
-7;E;3;BÃ¡rbara JerÃ³nimo;0;1;0;500;0;0;0;0
+7;E;3;Bárbara Jerónimo;0;1;0;500;0;0;0;0
 7;E;4;Beatriz Albuquerque;0;1;0;500;0;0;0;0
 7;E;5;Beatriz Batista;0;1;0;500;0;0;0;0
 7;E;6;Beatriz Pires;0;1;0;500;0;0;0;0
@@ -92,7 +92,7 @@ ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferr
 7;E;9;Daniela Alves;0;1;0;500;0;0;0;0
 7;E;10;Dinis Marques;0;1;0;500;0;0;0;0
 7;E;11;Dinis Silva;0;1;0;500;0;0;0;0
-7;E;12;Emaaaaaaalia Santos;0;1;0;500;0;0;0;0
+7;E;12;Emília Santos;0;1;0;500;0;0;0;0
 7;E;13;Francisca Pereira;0;1;0;500;0;0;0;0
 7;E;14;Guilhermo Fidalgo;0;1;0;500;0;0;0;0
 7;E;15;Hugo Moreira;0;1;0;500;0;0;0;0
@@ -100,7 +100,6 @@ ano;turma;numero;nome_completo;pontos;nivel;xp_sobra;xp_prasubir;t_bronze;t_ferr
 7;E;17;Joao Henriques;0;1;0;500;0;0;0;0
 7;E;18;Lara Silva;0;1;0;500;0;0;0;0
 7;E;19;Laura Garcia;0;1;0;500;0;0;0;0
-7;E;20;Lucas Almeida;0;1;0;500;0;0;0;0
 7;E;21;Maria Moura;0;1;0;500;0;0;0;0
 7;E;22;Matilde Figueiredo;0;1;0;500;0;0;0;0
 7;E;23;Matilde Fernandes;0;1;0;500;0;0;0;0
