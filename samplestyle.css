@@ -23,6 +23,13 @@
     #nomealuno{
         font-size: 50px;
         text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #rankingaluno{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 15px;
     }
 
     #circulo{
@@ -130,6 +137,13 @@
     #nomealuno{
         font-size: 50px;
         text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #rankingaluno{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 15px;
     }
     
     #circulonum{

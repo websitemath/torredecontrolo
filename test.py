@@ -2,12 +2,12 @@ import random
 import os
 import time
 os.system('copy dados.csv dados_backup.csv')
-#os.system('cp dados.csv dados_backup.csv')
+os.system('cp dados.csv dados_backup.csv')
 
 
 dados = [] #6,A,7,MariaAna,16900,,,,,
 
-f  = open("dados.csv", "r")
+f  = open("dados.csv", "r", encoding='windows-1252')
 
 for i in f.readlines():
     x = i.split(";")
@@ -104,7 +104,13 @@ def calcperc(line):
 
 writedata(dados)
 
+dadosOP = [] #dados organizado por pontos
+
 def write2html(line,barra_perc):
+    #print("-------------------------------------------------")
+    print(dadosOP)
+    ranking = dadosOP.index(line) + 1;
+
     randomNum = random.randint(0,33)
     barra_perc = str(barra_perc)
     f2 = open("htmls/" + str(line[0]) + str(line[1]) + "_" + str(line[2]) + ".html", "w")
@@ -120,6 +126,7 @@ def write2html(line,barra_perc):
         </head>
         <body>
             <h1 id="nomealuno"> """ + 'Estat&iacute;sticas de ' + str(line[3]) + """</h1>
+            <h1 id="rankingaluno">Ranking #""" + str(ranking) + """</h1>
             <div id="caixa">
                 <div id="nome">""" + str(line[3]) + """</div> 
                 <div id="nivelbarra">
@@ -168,7 +175,6 @@ def write2html(line,barra_perc):
     f2.write(msg)
 
 
-
 def checktrofeu(linha):
     msg = ""
     #print(str(linha[8]) == "1")
@@ -187,24 +193,26 @@ def checktrofeu(linha):
 
 
 
-a1 = 0
-for l in dados:
-    if (a1 > 0):
-        write2html(l,calcperc(l))
-    a1 += 1
+
 
 #pontos -> dados[l][4]
 #nome -> dados[l][3]
 
-dados.pop(0)#remover a primeira linha de dados
 
 #print(dados)
 
 pontos = []
-dadosOP = [] #dados organizado por pontos
+#dadosOP = [] #dados organizado por pontos
+
+dados.pop(0)
+print("-------------------------------------------------")
+print(dados)
+print("-------------------------------------------------")
+
 
 def listRanking():
     for l in dados:
+        print(l[4])
         pontos.append(int(l[4]))
 
     pontos.sort()
@@ -257,6 +265,10 @@ def listRanking():
 
 listRanking()
 
+
+for l in dados:
+    write2html(l,calcperc(l))
+
 #print(pontos)
 print(dadosOP)
 
@@ -298,7 +310,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         <script>
             function botao(){
                 value = String(document.getElementById("turmanum").value).toUpperCase();
-                window.location.replace("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html");
+                window.open("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html", "_self");
             }
         </script>
     </head>
@@ -327,7 +339,11 @@ def writeindex(dadosOrganizadosPorPontos,top):
 
 
 writeindex(dadosOP,10)
-#print(pontos)
+print("---------------------")
+print("ja podes fechar isto")
+print("---------------------")
+
+print(dadosOP[2])
 #print(e)
 
 
