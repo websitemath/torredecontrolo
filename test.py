@@ -291,8 +291,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
                             <th>""" + str(anoTurma) + """</th>
                             <th>""" + str(num) + """</th>
                             <th>""" + str(pontos) + """</th>
-                            <th>""" + str(nivel) + """</th>
-                            <th>""" + str(numTrofeus) + """</th>
                             <th>""" + str(i) + """</th>
                             </tr>\n            """
         i += 1
@@ -325,8 +323,6 @@ def writeindex(dadosOrganizadosPorPontos,top):
                     <th>Turma/Ano</th>
                     <th>N&uacute;mero</th>
                     <th>Pontos</th>
-                    <th>N&iacute;vel</th>
-                    <th>N&uacute;mero trofeus</th>
                     <th>Ranking</th>
                 </tr>
                 """ + msg2add + """
