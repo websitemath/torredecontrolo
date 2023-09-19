@@ -47,13 +47,13 @@
 
     #num{
         position: relative;
+        display: inline-block;
         font-size: 35px;
         text-align: center;
         background-color: blueviolet;
-        width: 50px;
         margin-left: 50px;
         margin-top: -30px;
-        padding: 5px;
+        padding: 10px;
         z-index: 1;
         border-radius: 10px;
     }
