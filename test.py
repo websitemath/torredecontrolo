@@ -311,7 +311,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
     f2.write(msg)
 
 
-writeindex(dadosOP,50)
+writeindex(dadosOP,10)
 print("---------------------")
 print("ja podes fechar isto")
 print("---------------------")
