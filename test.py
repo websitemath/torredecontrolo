@@ -125,23 +125,17 @@ def write2html(line,barra_perc):
             <title>""" + str(line[3]) + """</title>
         </head>
         <body>
-            <h1 id="nomealuno"> """ + 'Estat&iacute;sticas de ' + str(line[3]) + """</h1>
+            <h1 id="nomealuno"> """ + 'Estat&iacute;sticas do aluno' + """</h1>
             <h1 id="rankingaluno">Ranking #""" + str(ranking) + """</h1>
             <div id="caixa">
-                <div id="nome">""" + str(line[3]) + """</div> 
+                <div id="nome">""" + 'N&uacute;mero ' + str(line[2]) + " da turma " + str(line[0]) + str(line[1]) + """</div> 
                 <div id="nivelbarra">
                     <div id="circulonum">
                         <div id="circulo">
                             <img id="imagem" src="../avatar/""" + str(random.randint(1, 33)) + """.svg" alt="avatar">
                         </div>
                         <div id="num">
-                            """ + str(line[5]) + """
-                        </div>
-                    </div>
-                    
-                    <div id="barra">
-                        <div id="barracolorida" style="width: """ + barra_perc +"""%;">
-                            a
+                            """ + str(ranking) + ' lugar' + """
                         </div>
                     </div>
                 </div>
@@ -150,23 +144,6 @@ def write2html(line,barra_perc):
                 <div id="block">
                     <p id="cat">Pontos</p>        
                     <p id="subcat">""" + str(line[4]) + """</p>
-                </div>
-
-                <div id="block">
-                    <p id="cat">N&iacute;vel</p>        
-                    <p id="subcat">""" + str(line[5]) + """</p>
-                </div>
-                <div id="block">
-                    <p id="cat">N&uacute;mero de ta&ccedil;as</p>        
-                    <p id="subcat">""" + str(line[8] + line[9] + line[10] + line[11]) + """</p>
-                </div>
-                <div id="block">
-                    <p id="cat">Pontos para subir</p>        
-                    <p id="subcat">""" + str(line[7]) + """</p>
-                </div>
-
-                <div id="trofeusdiv">
-                    """ + str(checktrofeu(line)) + """
                 </div>
 
             </div>
@@ -313,7 +290,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         </script>
     </head>
     <body>
-        <h1 id="maintitle">Ranking do Desafio Matemático Mensal</h1>
+        <h1 id="maintitle">Ranking do Desafio Matem&auacute;tico Mensal</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
         <button id="botao" onclick="botao()">Carrega aqui</button>
