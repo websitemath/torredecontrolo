@@ -290,7 +290,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         </script>
     </head>
     <body>
-        <h1 id="maintitle">Ranking do Desafio Matem&auacute;tico Mensal</h1>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
         <button id="botao" onclick="botao()">Carrega aqui</button>
