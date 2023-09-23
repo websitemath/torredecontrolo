@@ -168,10 +168,10 @@
     
     #num{
         position: relative;
+        display: block;
         font-size: 35px;
         text-align: center;
         background-color: blueviolet;
-        width: 50px;
         margin-left: 50px;
         margin-top: -30px;
         padding: 5px;
@@ -202,6 +202,9 @@
         top: 250px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         left: 0;
         right: 0;
         text-align: center;
