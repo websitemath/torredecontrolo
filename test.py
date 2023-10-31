@@ -4,16 +4,26 @@ import time
 os.system('copy dados.csv dados_backup.csv')
 os.system('cp dados.csv dados_backup.csv')
 
-
 dados = [] #6,A,7,MariaAna,16900,,,,,
+ciclo2 = []
+ciclo3 = []
+
 
 f  = open("dados.csv", "r", encoding='windows-1252')
 
+
 for i in f.readlines():
     x = i.split(";")
-    x[-1] = x[-1].replace("\n","")        
+    x[-1] = x[-1].replace("\n","")
     dados.append(x)
-    
+    if int(x[0]) < 7:
+        # print("a")
+        ciclo2.append(x)
+    else:
+        ciclo3.append(x)
+
+# print(ciclo2)
+# print(ciclo3)
 #se der erro é pq existe uma linha amais no .csv
 
 
@@ -108,8 +118,22 @@ dadosOP = [] #dados organizado por pontos
 
 def write2html(line,barra_perc):
     #print("-------------------------------------------------")
-    print(dadosOP)
-    ranking = dadosOP.index(line) + 1;
+    #print(dadosOP)
+    dadosOPciclo2 = []
+    dadosOPciclo3 = []
+    
+    ranking = 0
+    for linha in dadosOP:
+        if int(linha[0]) < 7:
+            dadosOPciclo2.append(linha)
+        else:
+            dadosOPciclo3.append(linha)
+            
+
+    if int(line[0]) < 7:
+        ranking = dadosOPciclo2.index(line) + 1
+    else:
+        ranking = dadosOPciclo3.index(line) + 1
 
     randomNum = random.randint(0,33)
     barra_perc = str(barra_perc)
@@ -150,6 +174,8 @@ def write2html(line,barra_perc):
         </body>
         </html>"""
     f2.write(msg)
+    f2.close()
+    print("||",line,ranking)
 
 
 def checktrofeu(linha):
@@ -243,16 +269,23 @@ def listRanking():
 listRanking()
 
 
+
 for l in dados:
     write2html(l,calcperc(l))
+    print("wtfff",l,"wtfff")
 
 #print(pontos)
 print(dadosOP)
 
 def writeindex(dadosOrganizadosPorPontos,top):
     i = 1
-    msg2add = ""
+    ciclo2RankCount = 1
+    ciclo3RankCount = 1
+    msg2add2ciclo = ""
+    msg2add3ciclo = ""
     xy = 0
+
+
     for l in dadosOrganizadosPorPontos:
         if i < (top + 1):#aparaece ate top -1 
             nome = l[3]
@@ -262,22 +295,39 @@ def writeindex(dadosOrganizadosPorPontos,top):
             nivel = l[5]
             numTrofeus = str(l[8] + l[9] + l[10] + l[11])
             stringg = ""
-            if i % 2:
-                stringg = "background-color: #ffffff18;"
-            msg2add += """<tr style=" """ + str(stringg)  + """ ">
-                            <th>""" + str(anoTurma) + """</th>
-                            <th>""" + str(num) + """</th>
-                            <th>""" + str(pontos) + """</th>
-                            <th>""" + str(i) + """</th>
-                            </tr>\n            """
+            if int(l[0]) < 7 and ciclo2RankCount < (top + 1):
+                if ciclo2RankCount % 2:
+                    stringg = "background-color: #ffffff18;"
+                else:
+                    stringg = ""
+                msg2add2ciclo += """<tr style=" """ + str(stringg)  + """ ">
+                                <th>""" + str(anoTurma) + """</th>
+                                <th>""" + str(num) + """</th>
+                                <th>""" + str(pontos) + """</th>
+                                <th>""" + str(ciclo2RankCount) + """</th>
+                                </tr>\n            """
+                ciclo2RankCount+=1
+            elif ciclo3RankCount < (top + 1):
+                if ciclo3RankCount % 2:
+                    stringg = "background-color: #ffffff18;"
+                else:
+                    stringg = ""
+                msg2add3ciclo += """<tr style=" """ + str(stringg)  + """ ">
+                                <th>""" + str(anoTurma) + """</th>
+                                <th>""" + str(num) + """</th>
+                                <th>""" + str(pontos) + """</th>
+                                <th>""" + str(ciclo3RankCount) + """</th>
+                                </tr>\n            """
+                ciclo3RankCount+=1
+
         i += 1
         
 
-    f2 = open("index.html", "w")
+    f2 = open("main/ciclo2.html", "w")
     msg = """<!DOCTYPE html>
     <html lang="pt-pt">
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -290,7 +340,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         </script>
     </head>
     <body>
-        <h1 id="maintitle">Ranking do Desafio Matematico Mensal</h1>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 2ºCiclo</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
         <button id="botao" onclick="botao()">Carrega aqui</button>
@@ -302,13 +352,50 @@ def writeindex(dadosOrganizadosPorPontos,top):
                     <th>Pontos</th>
                     <th>Ranking</th>
                 </tr>
-                """ + msg2add + """
+                """ + msg2add2ciclo + """
             </table>
         </div>
     
     </body>
     </html>"""
     f2.write(msg)
+
+    f3 = open("main/ciclo3.html", "w")
+    msg = """<!DOCTYPE html>
+    <html lang="pt-pt">
+    <head>
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Torre de Controlo</title>
+        <script>
+            function botao(){
+                value = String(document.getElementById("turmanum").value).toUpperCase();
+                window.open("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html", "_self");
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 3ºCiclo</h1>
+        <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
+        <input type="text" id="turmanum" placeholder="Exemplo: 7A_11"><br>
+        <button id="botao" onclick="botao()">Carrega aqui</button>
+        <div id="tablediv">
+            <table>
+                <tr>
+                    <th>Turma/Ano</th>
+                    <th>N&uacute;mero</th>
+                    <th>Pontos</th>
+                    <th>Ranking</th>
+                </tr>
+                """ + msg2add3ciclo + """
+            </table>
+        </div>
+    
+    </body>
+    </html>"""
+    f3.write(msg)
 
 
 writeindex(dadosOP,10)
