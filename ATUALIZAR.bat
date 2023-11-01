@@ -1,4 +1,4 @@
-cd C:/Users/laran/OneDrive/Ambiente de Trabalho/2021-2022/7ano/GAMIFICAÇÃO/torredecontrolo
+cd "C:\Users\laran\OneDrive\Ambiente de Trabalho\torredecontrolo"
 python test.py
 git add *
 git status
