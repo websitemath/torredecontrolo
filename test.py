@@ -11,17 +11,18 @@ ciclo3 = []
 
 f  = open("dados.csv", "r", encoding='windows-1252')
 
-
+k=0
 for i in f.readlines():
-    x = i.split(";")
-    x[-1] = x[-1].replace("\n","")
-    dados.append(x)
-    if int(x[0]) < 7:
-        # print("a")
-        ciclo2.append(x)
-    else:
-        ciclo3.append(x)
-
+    if k!= 0:
+        x = i.split(";")
+        x[-1] = x[-1].replace("\n","")
+        dados.append(x)
+        if int(x[0]) < 7:
+            # print("a")
+            ciclo2.append(x)
+        else:
+            ciclo3.append(x)
+    else: k=1
 # print(ciclo2)
 # print(ciclo3)
 #se der erro é pq existe uma linha amais no .csv
