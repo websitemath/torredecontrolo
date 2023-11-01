@@ -63,7 +63,7 @@ def nivandstuff():
         except:
             print("")
     
-nivandstuff()
+#nivandstuff()
 
 
 def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
@@ -91,7 +91,7 @@ def trofeus(nivelBronze,nivelFerro,nivelOuro,nivelPlatina):
 
 
 
-trofeus(6,14,18,20)
+#trofeus(6,14,18,20)
 
 def writedata(data):
     f2 = open("dados.csv", "w")
