@@ -341,7 +341,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         </script>
     </head>
     <body>
-        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 2ºCiclo</h1>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 2&deg;Ciclo</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
         <button id="botao" onclick="botao()">Carrega aqui</button>
@@ -378,7 +378,7 @@ def writeindex(dadosOrganizadosPorPontos,top):
         </script>
     </head>
     <body>
-        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 3ºCiclo</h1>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal <br> 3&deg;Ciclo</h1>
         <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
         <input type="text" id="turmanum" placeholder="Exemplo: 7A_11"><br>
         <button id="botao" onclick="botao()">Carrega aqui</button>
