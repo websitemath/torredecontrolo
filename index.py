@@ -2,8 +2,8 @@ import random
 import os
 import time
 
-#os.system('copy dados.csv dados_backup.csv') # windows
-os.system('cp dados.csv dados_backup.csv') # linux
+os.system('copy dados.csv dados_backup.csv') # windows
+#os.system('cp dados.csv dados_backup.csv') # linux
 
 
 # aluno -> Ano,Turma,numero,id,pontos,ranking
