@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="pt-pt">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Torre de Controlo</title>
+        <script>
+            function botao(){
+                value = String(document.getElementById("turmanum").value).toUpperCase();
+                window.open("https://websitemath.github.io/torredecontrolo/htmls/" + value + ".html", "_self");
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="maintitle">Ranking do Desafio Matematico Mensal</h1>
+        <h1>Coloca os teus dados no formato: ANOTURMA_NUMERO</h1>
+        <input type="text" id="turmanum" placeholder="Exemplo: 6A_11"><br>
+        <button id="botao" onclick="botao()">Carrega aqui</button>
+        <div id="tablediv">
+            <table>
+                <tr>
+                    <th>Turma/Ano</th>
+                    <th>N&uacute;mero</th>
+                    <th>Pontos</th>
+                    <th>Ranking</th>
+                </tr>
+                <tr style=" background-color: #ffffff18; ">
+                            <th>7&deg;A</th>
+                            <th>1</th>
+                            <th>71000</th>
+                            <th>1</th>
+                            </tr>
+            <tr style="  ">
+                            <th>7&deg;B</th>
+                            <th>3</th>
+                            <th>679</th>
+                            <th>2</th>
+                            </tr>
+            <tr style=" background-color: #ffffff18; ">
+                            <th>7&deg;A</th>
+                            <th>20</th>
+                            <th>650</th>
+                            <th>3</th>
+                            </tr>
+            <tr style="  ">
+                            <th>7&deg;A</th>
+                            <th>13</th>
+                            <th>648</th>
+                            <th>4</th>
+                            </tr>
+            <tr style=" background-color: #ffffff18; ">
+                            <th>7&deg;A</th>
+                            <th>3</th>
+                            <th>620</th>
+                            <th>5</th>
+                            </tr>
+            <tr style="  ">
+                            <th>7&deg;A</th>
+                            <th>17</th>
+                            <th>620</th>
+                            <th>6</th>
+                            </tr>
+            <tr style=" background-color: #ffffff18; ">
+                            <th>7&deg;A</th>
+                            <th>7</th>
+                            <th>294</th>
+                            <th>7</th>
+                            </tr>
+            <tr style="  ">
+                            <th>7&deg;A</th>
+                            <th>5</th>
+                            <th>286</th>
+                            <th>8</th>
+                            </tr>
+            <tr style=" background-color: #ffffff18; ">
+                            <th>7&deg;A</th>
+                            <th>14</th>
+                            <th>253</th>
+                            <th>9</th>
+                            </tr>
+            <tr style="  ">
+                            <th>7&deg;A</th>
+                            <th>16</th>
+                            <th>169</th>
+                            <th>10</th>
+                            </tr>
+            
+            </table>
+        </div>
+    
+    </body>
+    </html>
