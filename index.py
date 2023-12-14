@@ -23,7 +23,7 @@ def DatafromFile():
 
 def WriteDataToFile(dados):
     f2  = open("dados.csv", "w")
-    for l in data:
+    for l in dados:
         f2.write(str(f"{l[0]};{l[1]};{l[2]};{l[3]};{l[4]};{l[5]}\n"))
     f2.close()
 
@@ -224,8 +224,8 @@ updaterankingSpecificData(data2ciclo)
 updaterankingSpecificData(data3ciclo)
 dataWithRanking = data2ciclo+data3ciclo
 
-#WriteDataToFile(dataWithRanking)
-#CreateAllAlunosHtmls(dataWithRanking)
+WriteDataToFile(dataWithRanking)
+CreateAllAlunosHtmls(dataWithRanking)
 createMainPagesHtmls(data2ciclo,data3ciclo)
 
 
