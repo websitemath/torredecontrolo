@@ -16,31 +16,18 @@ def DatafromFile():
     for line in f.readlines():
         row = line.split(";")
         row[-1] = row[-1].replace("\n","")
-        row[4] = float(row[4].replace(",","."))
+        row[3] = float(row[3].replace(",","."))
         dados.append(row)
     f.close()
     return dados
 
 def WriteDataToFile(dados):
     f2  = open("dados.csv", "w")
+    sorted_data = sorted(data, key=lambda x: (int(x[0]), x[1], int(x[2])))
+    print(sorted_data)
     for l in dados:
-        f2.write(str(f"{l[0]};{l[1]};{l[2]};{l[3]};{l[4]};{l[5]}\n"))
+        f2.write(str(f"{l[0]};{l[1]};{l[2]};{l[3]};{l[4]}\n"))
     f2.close()
-
-
-def writedata(data):
-    f2 = open("dados.csv", "w")
-    for l in data:
-        str2add = ""
-        x = 0
-        for k in l:
-            if(x == 11):
-                str2add += str(k)
-            else:
-                 str2add += str(k) + ";"
-            x += 1
-        f2.write(str2add + "\n")
-
 
 
 def DataDividedCiclo(dados):# -> (ciclo2,ciclo3)
@@ -58,13 +45,13 @@ def DataDividedCiclo(dados):# -> (ciclo2,ciclo3)
 def updaterankingSpecificData(listaCiclo): # parametro tem que ser um dos ciclos obrigatoriamente
     pointsLista = []
     for aluno in listaCiclo:
-        if not (aluno[4] in pointsLista):
-            pointsLista.append(aluno[4])
+        if not (aluno[3] in pointsLista):
+            pointsLista.append(aluno[3])
     pointsLista = sorted(pointsLista,reverse=True)
 
     for i in range(0,len(listaCiclo)):
-        listaCiclo[i][5] = pointsLista.index(listaCiclo[i][4])+1
-    listaCiclo.sort(key=lambda x: x[5])
+        listaCiclo[i][4] = pointsLista.index(listaCiclo[i][3])+1
+    listaCiclo.sort(key=lambda x: x[4])
     
 
 def AlunoWriteHtml(aluno):
@@ -81,7 +68,7 @@ def AlunoWriteHtml(aluno):
         </head>
         <body>
             <h1 id="nomealuno"> """ + 'Estat&iacute;sticas do aluno' + """</h1>
-            <h1 id="rankingaluno">Ranking #""" + str(aluno[5]) + """</h1>
+            <h1 id="rankingaluno">Ranking #""" + str(aluno[4]) + """</h1>
             <div id="caixa">
                 <div id="nome">""" + 'N&uacute;mero ' + str(aluno[2]) + " da turma " + str(aluno[0]) + str(aluno[1]) + """</div> 
                 <div id="nivelbarra">
@@ -90,7 +77,7 @@ def AlunoWriteHtml(aluno):
                             <img id="imagem" src="../avatar/""" + str(random.randint(1, 33)) + """.svg" alt="avatar">
                         </div>
                         <div id="num">
-                            """ + str(aluno[5]) + ' lugar' + """
+                            """ + str(aluno[4]) + ' lugar' + """
                         </div>
                     </div>
                 </div>
@@ -98,7 +85,7 @@ def AlunoWriteHtml(aluno):
                 <div id="nada"></div>
                 <div id="block">
                     <p id="cat">Pontos</p>        
-                    <p id="subcat">""" + str(aluno[4]).replace(",",".") + """</p>
+                    <p id="subcat">""" + str(aluno[3]).replace(",",".") + """</p>
                 </div>
 
             </div>
@@ -126,8 +113,8 @@ def createMainPagesHtmls(dados2ciclo,dados3ciclo):
         msg2add2ciclo += """<tr style=" """ + str(backgroundstring)  + """ ">
                                 <th>""" + str(aluno[0]) + "&deg;" + str(aluno[1]) + """</th>
                                 <th>""" + str(aluno[2]) + """</th>
+                                <th>""" + str(aluno[3]) + """</th>
                                 <th>""" + str(aluno[4]) + """</th>
-                                <th>""" + str(aluno[5]) + """</th>
                                 </tr>\n            """
     msg = """<!DOCTYPE html>
     <html lang="pt-pt">
@@ -175,8 +162,8 @@ def createMainPagesHtmls(dados2ciclo,dados3ciclo):
         msg2add3ciclo += """<tr style=" """ + str(backgroundstring)  + """ ">
                                 <th>""" + str(aluno[0]) + "&deg;" + str(aluno[1]) + """</th>
                                 <th>""" + str(aluno[2]) + """</th>
+                                <th>""" + str(aluno[3]) + """</th>
                                 <th>""" + str(aluno[4]) + """</th>
-                                <th>""" + str(aluno[5]) + """</th>
                                 </tr>\n            """
     msg = """<!DOCTYPE html>
     <html lang="pt-pt">
@@ -227,9 +214,3 @@ dataWithRanking = data2ciclo+data3ciclo
 WriteDataToFile(dataWithRanking)
 CreateAllAlunosHtmls(dataWithRanking)
 createMainPagesHtmls(data2ciclo,data3ciclo)
-
-
-
-
-
-
