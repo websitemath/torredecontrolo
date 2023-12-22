@@ -23,8 +23,6 @@ def DatafromFile():
 
 def WriteDataToFile(dados):
     f2  = open("dados.csv", "w")
-    sorted_data = sorted(data, key=lambda x: (int(x[0]), x[1], int(x[2])))
-    print(sorted_data)
     for l in dados:
         f2.write(str(f"{l[0]};{l[1]};{l[2]};{l[3]};{l[4]}\n"))
     f2.close()
