@@ -7,7 +7,7 @@ os.system('copy dados.csv dados_backup.csv') # windows
 
 
 # aluno -> Ano,Turma,numero,id,pontos,ranking
-
+#ttttt
 
 def DatafromFile():
     f  = open("dados.csv", "r")
